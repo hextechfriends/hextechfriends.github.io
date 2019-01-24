@@ -38,7 +38,7 @@
     
     
       
-        <title>Building - Hextech Friends Documentation</title>
+        <title>Planned Features - Hextech Friends Documentation</title>
       
     
     
@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#building-the-application-stack" tabindex="1" class="md-skip">
+      <a href="#planned-features" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -127,7 +127,7 @@
                 Hextech Friends Documentation
               </span>
               <span class="md-header-nav__topic">
-                Building
+                Planned Features
               </span>
             
           
@@ -314,6 +314,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../building/" title="Building" class="md-nav__link">
+      Building
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -324,65 +336,10 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Building
-      </label>
-    
-    <a href="./" title="Building" class="md-nav__link md-nav__link--active">
-      Building
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-the-source-code" title="Getting the source code" class="md-nav__link">
-    Getting the source code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-the-server" title="Building the server" class="md-nav__link">
-    Building the server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-the-client" title="Building the client" class="md-nav__link">
-    Building the client
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../planned_features/" title="Planned Features" class="md-nav__link">
+    <a href="./" title="Planned Features" class="md-nav__link md-nav__link--active">
       Planned Features
     </a>
+    
   </li>
 
     
@@ -439,36 +396,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-the-source-code" title="Getting the source code" class="md-nav__link">
-    Getting the source code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-the-server" title="Building the server" class="md-nav__link">
-    Building the server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-the-client" title="Building the client" class="md-nav__link">
-    Building the client
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -479,46 +406,18 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Soundofdarkness/HextechFriends/edit/master/docs/building.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Soundofdarkness/HextechFriends/edit/master/docs/planned_features.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="building-the-application-stack">Building the application stack</h1>
-<h2 id="getting-the-source-code">Getting the source code</h2>
-<p>Hextech Friends currently uses a monorepo to store the full soure code. <br>
-Just clone it with this command:</p>
-<pre><code class="bash">git clone https://github.com/Soundofdarkness/HextechFriends.git
-</code></pre>
-
-<p><em>Now to the fun part</em></p>
-<h2 id="building-the-server">Building the server</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>You need to have the Java Development Kit(JDK) installed to build the server.</p>
-</div>
-<p>Hextech Friends uses Gradle to build the server component.
-Just use</p>
-<pre><code class="bash">cd ./Server
-./gradlew.bat shadowJar
-</code></pre>
-
-<p>Run the server with</p>
-<pre><code class="bash">java -jar ./builds/libs/hextech-friends-1.0-SNAPSHOT-all.jar
-</code></pre>
-
-<h2 id="building-the-client">Building the client</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>You need to have Visual Studio or VS Build Tools for C# installed.</p>
-</div>
-<p>Here just open <code>HextechFriends.sln</code> in <code>Client/</code> with Visual Studio
-and press build. 
-Otherwise use </p>
-<pre><code class="bash">cd ./Client
-msbuild HextechFriendsClient.sln /t:Build /p:Configuration=Release
-</code></pre>
-
-<p>Then you can start the executable in <code>Client/HextechFriendsClient/bin/Debug/HextechFriendsClient.exe</code></p>
-<p><strong>That's all   \o/ !</strong></p>
+                <h1 id="planned-features">Planned Features</h1>
+<ol>
+<li>
+<p>It is planned to register Hextech Friends as protocol handler for <code>hextech://</code> but this requires a custom installer, which was too complex for the timeframe of the API-Challenge.</p>
+</li>
+<li>
+<p>Hextech Friends should be able to share Runes and Builds via <code>hextech://</code> links too.</p>
+</li>
+</ol>
                 
                   
                 
@@ -539,7 +438,7 @@ msbuild HextechFriendsClient.sln /t:Build /p:Configuration=Release
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../architecture/" title="Architecture" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../building/" title="Building" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -548,19 +447,19 @@ msbuild HextechFriendsClient.sln /t:Build /p:Configuration=Release
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Architecture
+                Building
               </span>
             </div>
           </a>
         
         
-          <a href="../planned_features/" title="Planned Features" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../credits/" title="Credits" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Planned Features
+                Credits
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
